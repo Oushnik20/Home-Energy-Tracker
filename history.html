@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usage History - Home Energy Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="animated fadeIn">Usage History</h1>
+            <nav>
+                <ul class="nav-links animated fadeIn">
+                    <li><a href="index.html" aria-label="Go to Usage Tracker">Usage Tracker</a></li>
+                    <li><a href="suggestions.html" aria-label="View Suggestions">Suggestions</a></li>
+                    <li><a href="alerts.html" aria-label="Check Alerts">Alerts</a></li>
+                    <li><a href="history.html" aria-label="View History">History</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Your Past Usage</h2>
+            <div class="table-wrapper">
+                <table id="history-table" aria-describedby="usage-history-description">
+                    <caption id="usage-history-description">A list of your past energy usage and associated costs.</caption>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Daily Usage (kWh)</th>
+                            <th>Cost ($)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025-01-01</td>
+                            <td>15.6</td>
+                            <td>2.34</td>
+                        </tr>
+                        <tr>
+                            <td>2025-01-02</td>
+                            <td>18.3</td>
+                            <td>2.76</td>
+                        </tr>
+                        <tr>
+                            <td>2025-01-03</td>
+                            <td>14.7</td>
+                            <td>2.20</td>
+                        </tr>
+                        <tr>
+                            <td>2025-01-04</td>
+                            <td>12.9</td>
+                            <td>1.94</td>
+                        </tr>
+                        <tr>
+                            <td>2025-01-05</td>
+                            <td>20.5</td>
+                            <td>3.10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="summary">
+            <h2>Monthly Usage Summary</h2>
+            <div class="summary-box">
+                <p>Total Energy Consumed: <strong>81.0 kWh</strong></p>
+                <p>Total Cost: <strong>$12.34</strong></p>
+                <p>Average Daily Usage: <strong>16.2 kWh</strong></p>
+                <p>Average Daily Cost: <strong>$2.47</strong></p>
+            </div>
+        </section>
+
+        <section class="tips">
+            <h2>Energy-Saving Tips</h2>
+            <ul>
+                <li><strong>Switch to LED bulbs:</strong> LED lights consume much less energy compared to traditional incandescent bulbs.</li>
+                <li><strong>Unplug devices when not in use:</strong> Many devices consume energy even when turned off.</li>
+                <li><strong>Use smart thermostats:</strong> They can help manage heating and cooling more efficiently.</li>
+                <li><strong>Maintain your appliances:</strong> Regular maintenance can improve the efficiency of appliances, such as HVAC systems and water heaters.</li>
+                <li><strong>Take advantage of natural light:</strong> Open curtains during the day to reduce the need for artificial lighting.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; Oushnik's Home Energy Tracker. All rights reserved.</p>
+
+        </div>
+    </footer>
+</body>
+</html>

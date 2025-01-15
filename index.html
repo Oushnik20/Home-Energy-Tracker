@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Energy Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <header>
+        <h1 class="animated fadeIn">Welcome to Oushnik's Home Energy Tracker</h1>
+        <nav>
+            <ul class="nav-links animated fadeIn">
+                <li><a href="index.html">Usage Tracker</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="animated fadeIn">
+        <section id="usage" class="card">
+            <h2>Track Your Energy Usage</h2>
+            <div class="input-group">
+                <label for="daily-usage">Daily Energy Usage (kWh):</label>
+                <input type="number" id="daily-usage" placeholder="Enter daily usage">
+            </div>
+            <div class="input-group">
+                <label for="rate">Energy Cost Rate (per kWh):</label>
+                <input type="number" id="rate" placeholder="Enter cost rate">
+            </div>
+            <button onclick="predictBill()">Predict Monthly Bill</button>
+            <p id="bill-prediction"></p>
+        </section>
+    </main>
+    <footer class="animated fadeIn">
+        <p>&copy; Oushnik's Home Energy Tracker. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

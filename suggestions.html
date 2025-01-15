@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions - Home Energy Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showSuggestions(bill) {
+            const suggestions = document.getElementById("suggestion-list");
+            suggestions.innerHTML = "";
+
+            if (bill < 100) {
+                suggestions.innerHTML = `
+                    <li>Great job! Your energy usage is low. Continue using energy-efficient appliances.</li>
+                    <li>Consider using LED lights for further savings.</li>
+                    <li>Unplug devices when not in use to minimize standby power consumption.</li>
+                `;
+            } else if (bill >= 100 && bill < 300) {
+                suggestions.innerHTML = `
+                    <li>Your energy usage is moderate. Optimize appliance usage to reduce costs.</li>
+                    <li>Run washing machines and dishwashers on full loads.</li>
+                    <li>Switch to a programmable thermostat to save on heating and cooling.</li>
+                `;
+            } else {
+                suggestions.innerHTML = `
+                    <li>Your energy bill is high. Consider upgrading to energy-efficient appliances.</li>
+                    <li>Identify and reduce the use of high-power-consuming devices like heaters and air conditioners.</li>
+                    <li>Inspect for poor insulation or air leaks that could be increasing your HVAC costs.</li>
+                    <li>Install solar panels for long-term savings.</li>
+                `;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Energy-Saving Suggestions</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Usage Tracker</a></li>
+                <li><a href="suggestions.html">Suggestions</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="suggestions" class="card">
+            <h2>Get Suggestions Based on Your Monthly Bill</h2>
+            <div class="input-group">
+                <label for="monthly-bill">Enter Your Estimated Monthly Bill:</label>
+                <input type="number" id="monthly-bill" placeholder="Enter bill amount">
+            </div>
+            <button onclick="showSuggestions(document.getElementById('monthly-bill').value)">Get Suggestions</button>
+            <ul id="suggestion-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Oushnik's Home Energy Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
